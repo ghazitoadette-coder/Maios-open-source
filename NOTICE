@@ -1,0 +1,9 @@
+MAIOS (Mobile Artificial & Interactive Operating System)
+Copyright (c) 2026 MAIOS Open Source Project & Contributors
+This product includes software developed as part of the MAIOS System Initiative.
+Attributions & Core Components:
+MAIOS Native C++ Core Engine (ARM64 Optimized)
+Auto-VCF Contact Scanner & Observer Engine
+Interactive Fake Call Simulator Subsystem
+Google Protocol Buffers (Protobuf) Serialization System
+For license details, please refer to the LICENSE file included in the root directory.
