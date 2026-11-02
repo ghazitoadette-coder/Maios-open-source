@@ -13,7 +13,7 @@ Selamat datang di repositori resmi **MAIOS (Mobile Advanced Interactive OS)**. R
 
 > [!CAUTION]
 > **ANCAMAN MALWARE & FORMAT DIBATALKAN**
-> 1. **Status Game Word:** Aplikasi/payload bernama **Game Word** (`com.gameword.vulnerability`) telah **DIBOKIR TOTAL (BANNED GLOBAL)**. Jangan sekali-kali mencoba mengeksekusi binary ini di dalam folder `/system/framework/`.
+> 1. **Status Game Word:** Aplikasi/payload bernama **Game Word** (`com.gameword.ghazi`) telah **DIBOKIR TOTAL (BANNED GLOBAL)**. Jangan sekali-kali mencoba mengeksekusi binary ini di dalam folder `/system/framework/`.
 > 2. **Format `.cof` Tidak Berlaku:** Format lama **COF MAIOS (`.cof`)** telah **DICANCEL/DEPRECATED**. Format ini mengandung kerentanan pada modul antena Wi-Fi dan telah digantikan oleh standar `build.prop`, `.conf`, dan `.json`.
 > 3. **Modul Antena Wi-Fi:** Selalu pastikan aturan `drweb_rules.conf` aktif untuk mencegah *broadcast payload* berbahaya menyebar melalui jaringan lokal.
 
