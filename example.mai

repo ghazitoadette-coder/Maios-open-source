@@ -1,0 +1,21 @@
+# ==========================================
+# MAIOS v1.0 - .mai File Format Example
+# Created by Ghazi
+# ==========================================
+
+[System_Profile]
+format_name = MAIOS Interactive File
+extension = .mai
+status = experimental
+compiler = native_cpp
+
+[Metadata]
+module_id = core_mai_01
+description = Custom extension file for MAIOS system configuration and custom script handling.
+version = 1.0.0
+
+[Data_Block]
+# Custom instructions or parameters go here
+exec_mode = background
+priority = high
+secure_boot = enabled
