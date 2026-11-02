@@ -1,4 +1,4 @@
-# 🚀 MAIOS v1.3 — Mobile Advanced Interactive OS Ecosystem
+# 🚀 MAIOS v1.0 — Mobile Advanced Interactive OS Ecosystem
 
 [![Target SDK](https://img.shields.io/badge/Target%20SDK-30%20%28Android%2011%29-00f0ff?style=for-the-badge&logo=android)](https://developer.android.com/)
 [![Security Engine](https://img.shields.io/badge/Security-Dr.Web%20Active-00ff66?style=for-the-badge&logo=shield)](https://www.drweb.com/)
@@ -69,7 +69,7 @@ exec /system/bin/drweb_checker --scan-framework
 
 | Parameter | Spesifikasi Sistem |
 | :--- | :--- |
-| **Versi OS** | MAIOS v1.3.0 (`MAIOS-R11-2026`) |
+| **Versi OS** | MAIOS v1.0 (`MAIOS-R11-2026`) |
 | **Target SDK** | SDK 30 (Android 11) |
 | **Target Hardware** | Xiaomi Redmi Note 14 Pro 5G (`arm64-v8a`) |
 | **Chipset** | MediaTek Dimensity 7300 Ultra |
