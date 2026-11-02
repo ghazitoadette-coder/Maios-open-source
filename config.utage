@@ -1,0 +1,11 @@
+[MAIOS_UTAGE_SYSTEM]
+version = 1.0.0
+engine = native_cpp
+mode = standalone
+author = Ghazi
+status = active
+
+[CORE_CONFIG]
+boot_sequence = fast
+debug_mode = true
+target_platform = universal
