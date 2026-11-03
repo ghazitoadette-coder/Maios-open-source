@@ -1,0 +1,9 @@
+# MAIOS Customer Support & Helpdesk Property Configuration
+maios.support.enabled=true
+maios.support.hotline=085123349909
+maios.support.email=support@maios.system
+maios.support.operational.hours=24/7
+maios.support.auto.response=Halo! Selamat datang di Layanan Dukungan MAIOS. Ada yang bisa kami bantu terkait sistem card reader atau game Astro DX?
+maios.support.category.billing=Bantuan Tarif & Pembayaran (Rp10.000 / Rp20.000)
+maios.support.category.hardware=Bantuan Reader AIME & NFC
+maios.support.category.game=Bantuan Sesi Lagu & Mabar Online
