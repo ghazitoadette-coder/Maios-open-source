@@ -1,0 +1,36 @@
+{
+  "maios_system_config": {
+    "project_name": "MAIOS",
+    "developer": "Ghazi",
+    "description": "Arcade Session Manager & Universal Aime Reader Integration JSON Format",
+    "hardware_settings": {
+      "reader_type": "Universal_Card_Reader",
+      "supported_media": [
+        "NFC_Chip",
+        "Debit_Card",
+        "Game_Card",
+        "Aime_Card"
+      ],
+      "hotline_support": "085123349909"
+    },
+    "pricing_configurations": {
+      "single_player": {
+        "player_count": 1,
+        "pricing_fee": 10000,
+        "song_limit": 3,
+        "online_mabar": false
+      },
+      "multi_player_online": {
+        "player_count": 2,
+        "pricing_fee": 20000,
+        "song_limit": 4,
+        "online_mabar": true
+      }
+    },
+    "launcher_settings": {
+      "target_package": "com.maios.astrodx",
+      "auto_close_enabled": true,
+      "interface_theme": "MAIOS_Dark_Arcade"
+    }
+  }
+}
