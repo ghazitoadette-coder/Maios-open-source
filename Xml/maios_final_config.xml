@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MAIOS Final XML System Configuration (.xml) -->
+<!-- Pengembang: Ghazi -->
+<!-- Sistem: Arcade Session Manager & Universal Aime Reader Integration -->
+
+<maios_system_config>
+    <project_name>MAIOS</project_name>
+    <developer>Ghazi</developer>
+    <description>Final XML System Configuration before Another Language Integration</description>
+    
+    <!-- Konfigurasi Perangkat Keras & Kartu -->
+    <hardware_settings>
+        <reader_type>Universal_Card_Reader</reader_type>
+        <supported_media>
+            <item>NFC_Chip</item>
+            <item>Debit_Card</item>
+            <item>Game_Card</item>
+            <item>Aime_Card</item>
+        </supported_media>
+        <hotline_support>085123349909</hotline_support>
+    </hardware_settings>
+
+    <!-- Pengaturan Tarif & Mode Sesi Permainan -->
+    <pricing_configurations>
+        <session_mode type="single_player">
+            <player_count>1</player_count>
+            <pricing_fee>10000</pricing_fee>
+            <song_limit>3</song_limit>
+            <online_mabar>false</online_mabar>
+        </session_mode>
+
+        <session_mode type="multi_player_online">
+            <player_count>2</player_count>
+            <pricing_fee>20000</pricing_fee>
+            <song_limit>4</song_limit>
+            <online_mabar>true</online_mabar>
+        </session_mode>
+    </pricing_configurations>
+
+    <!-- Pengaturan Launcher & Auto-Close Aplikasi -->
+    <launcher_settings>
+        <target_package>com.maios.astrodx</target_package>
+        <auto_close_enabled>true</auto_close_enabled>
+        <interface_theme>MAIOS_Dark_Arcade</interface_theme>
+    </launcher_settings>
+</maios_system_config>
