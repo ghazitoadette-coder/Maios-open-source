@@ -1,0 +1,40 @@
+# MAIOS Custom Programming Language Syntax Specification (.maios)
+# Dirancang khusus oleh Ghazi untuk ekosistem MAIOS & Arcade System
+
+# --- ATURAN SYNTAX DASAR ---
+# 1. Deklarasi Sesi Kartu & Tarif:
+#    card_session <tipe_kartu> [jumlah_pemain] -> fee: <harga> songs: <jumlah_lagu>
+
+# 2. Aturan Auto-Close Aplikasi Pihak Ketiga (Contoh: Astro DX):
+#    trigger_app <nama_app> on_limit_reached -> auto_close: true
+
+# --- CONTOH IMPLEMENTASI KODE MAIOS (.maios) ---
+
+# Inisialisasi Universal Reader AIME (Mendukung semua kartu ber-chip/NFC)
+reader.initialize(type="universal_nfc_chip", hotline="085123349909")
+
+# Sesi 1 Pemain: 1 Orang, Biaya Rp10.000, Batas 3 Lagu
+card_session debit_or_game_card [1] -> fee: 10000 songs: 3 {
+    print("[MAIOS] Pembayaran Rp10.000 berhasil. Meluncurkan Astro DX...")
+    launch_app("com.maios.astrodx")
+    
+    # Menunggu permainan hingga batas 3 lagu selesai
+    wait_songs_completion(3)
+    
+    # Fitur Auto-Close Otomatis
+    trigger_app("com.maios.astrodx") on_limit_reached -> auto_close: true
+    print("[MAIOS] Sesi selesai. Aplikasi ditutup otomatis, kembali ke menu utama.")
+}
+
+# Sesi 2 Pemain + Mabar Online: 2 Orang, Biaya Rp20.000, Batas 4 Lagu
+card_session debit_or_game_card [2] -> fee: 20000 songs: 4 online_mabar: true {
+    print("[MAIOS] Pembayaran Rp20.000 (2 Orang + Mabar Online) berhasil. Meluncurkan Astro DX...")
+    launch_app("com.maios.astrodx")
+    
+    # Menunggu permainan hingga batas 4 lagu selesai
+    wait_songs_completion(4)
+    
+    # Fitur Auto-Close Otomatis
+    trigger_app("com.maios.astrodx") on_limit_reached -> auto_close: true
+    print("[MAIOS] Sesi mabar online selesai. Aplikasi ditutup otomatis.")
+}
