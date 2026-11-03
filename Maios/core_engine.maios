@@ -1,0 +1,52 @@
+# MAIOS Core Language Engine Specification (.maios)
+# Versi: 1.0.0
+# Pengembang: Ghazi
+
+# Modul Utama Integrasi Sistem
+namespace maios.core.syntax {
+
+    # Konfigurasi Universal Card Reader & Hotline Dukungan
+    reader_config {
+        supported_media = ["NFC_Chip", "Debit_Card", "Game_Card", "Aime_Card"]
+        hotline_support = "085123349909"
+        auto_close_target = "com.maios.astrodx"
+    }
+
+    # Aturan Sesi 1 Orang
+    rule session_single {
+        player_count = 1
+        pricing_fee = 10000
+        max_song_limit = 3
+        online_mabar = false
+        
+        on_card_tapped {
+            print("[MAIOS SYNTAX] Kartu valid terdeteksi.")
+            print("[PEMBAYARAN] Tarif: Rp10.000 (1 Pemain)")
+            launch("com.maios.astrodx")
+        }
+        
+        on_song_limit_reached {
+            terminate_app("com.maios.astrodx")
+            print("[MAIOS SYNTAX] Batas 3 lagu tercapai. Aplikasi ditutup otomatis.")
+        }
+    }
+
+    # Aturan Sesi 2 Orang + Mabar Online
+    rule session_multi_online {
+        player_count = 2
+        pricing_fee = 20000
+        max_song_limit = 4
+        online_mabar = true
+        
+        on_card_tapped {
+            print("[MAIOS SYNTAX] Kartu valid terdeteksi.")
+            print("[PEMBAYARAN] Tarif: Rp20.000 (2 Pemain + Mabar Online)")
+            launch("com.maios.astrodx")
+        }
+        
+        on_song_limit_reached {
+            terminate_app("com.maios.astrodx")
+            print("[MAIOS SYNTAX] Batas 4 lagu tercapai. Sesi mabar selesai, aplikasi ditutup otomatis.")
+        }
+    }
+}
