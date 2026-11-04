@@ -1,0 +1,22 @@
+// ==========================================
+// MAIOS SYSTEM CONFIGURATION
+// File: config.maios
+// ==========================================
+
+system_profile {
+    name = "MAIOS_Core_System";
+    version = "1.0.0";
+    mode = "production";
+}
+
+core_parameters {
+    enable_custom_modules = true;
+    strict_mode = true;
+    debug_logging = false;
+}
+
+storage_config {
+    root_path = "/Maios/";
+    config_mount = "/Maios/GMS/";
+    auto_sync = true;
+}
