@@ -1,0 +1,41 @@
+// ==========================================
+// MAIOS MOBILE SERVICE (MMS) CORE
+// File: MMS_service.maios
+// ==========================================
+
+mms_service_profile {
+    service_name = "MAIOS_Mobile_Service";
+    version = "1.0.0";
+    target_ecosystem = "MAIOS_Core";
+    status = "active";
+}
+
+initialization_sequence {
+    load_dependencies("config.maios");
+    load_mode_profile("gms_mode.maios");
+    verify_mms_integrity();
+}
+
+mms_core_modules {
+    module account_manager {
+        auto_sync = true;
+        secure_token_storage = true;
+    }
+
+    module push_messaging {
+        protocol = "maios_push_v1";
+        keep_alive_interval_ms = 30000;
+    }
+
+    module framework_api {
+        expose_to_apps = true;
+        strict_permission_check = true;
+    }
+}
+
+runtime_hooks {
+    on_system_ready {
+        start_module("account_manager");
+        start_module("push_messaging");
+    }
+}
