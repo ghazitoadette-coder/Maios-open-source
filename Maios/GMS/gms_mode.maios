@@ -1,0 +1,36 @@
+// ==========================================
+// MAIOS GMS MODE CONFIGURATION
+// File: gms_mode.maios
+// ==========================================
+
+mode_profile {
+    default_mode = "balanced";
+    fallback_safety = true;
+}
+
+available_modes {
+    mode performance {
+        cpu_boost = true;
+        memory_cap = "1024MB";
+        priority = "high";
+    }
+
+    mode balanced {
+        cpu_boost = false;
+        memory_cap = "512MB";
+        priority = "normal";
+    }
+
+    mode powersaver {
+        cpu_boost = false;
+        memory_cap = "256MB";
+        priority = "low";
+        throttle_background = true;
+    }
+}
+
+mode_triggers {
+    on_low_battery -> "powersaver";
+    on_heavy_load -> "performance";
+    on_idle -> "balanced";
+}
